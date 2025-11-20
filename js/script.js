@@ -1,9 +1,9 @@
-// script.js
+// Fungsi untuk toggle (buka/tutup) konten detail kota
 function toggleContent(id) {
     var content = document.getElementById(id);
-    if (content.classList.contains('show')) {
-        content.classList.remove('show');
+    if (content.style.display === "block") {
+        content.style.display = "none";
     } else {
-        content.classList.add('show');
+        content.style.display = "block";
     }
 }
