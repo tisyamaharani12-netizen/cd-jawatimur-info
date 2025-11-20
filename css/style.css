@@ -1,33 +1,64 @@
+/* Styling untuk body halaman */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
+/* Styling untuk header */
 header {
-    background: #d32f2f;
-    color: #fff;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
     padding: 20px;
 }
 
+/* Styling untuk container utama */
 .container {
-    margin-top: 30px;
-}
-
-select {
-    padding: 10px;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-.info-box {
-    background: white;
-    width: 60%;
-    margin: 30px auto;
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
+    background: white;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    text-align: left;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
+/* Styling untuk setiap kota */
+.city {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Styling untuk header kota (klik-able) */
+.city-header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Styling untuk konten detail kota (default hidden) */
+.city-content {
+    display: none;
+    padding: 15px;
+}
+
+/* Styling untuk list */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Styling untuk footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+}
+
