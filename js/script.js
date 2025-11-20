@@ -1,41 +1,57 @@
-const data = {
-    "Surabaya": {
-        wisata: ["Tugu Pahlawan", "Monumen Kapal Selam", "Kebun Binatang Surabaya"],
+// Data makanan, wisata, kesenian setiap kota
+const dataDaerah = {
+    Surabaya: {
         makanan: ["Rawon", "Rujak Cingur", "Lontong Balap"],
-        budaya: ["Ludruk", "Tari Remo"]
+        wisata: ["Tugu Pahlawan", "Kebun Binatang Surabaya", "Jembatan Suramadu"],
+        kesenian: ["Ludruk", "Remo Surabaya"]
     },
-    "Malang": {
-        wisata: ["Jatim Park", "Museum Angkut", "Gunung Bromo"],
-        makanan: ["Bakso Malang", "Cwie Mie", "Orem-orem"],
-        budaya: ["Topeng Malangan"]
+
+    Malang: {
+        makanan: ["Bakso Malang", "Orem-orem", "Cwie Mie"],
+        wisata: ["Jatim Park", "Museum Angkut", "Kampung Warna-Warni"],
+        kesenian: ["Topeng Malang", "Karawitan"]
     },
-    "Banyuwangi": {
-        wisata: ["Kawah Ijen", "Pantai Pulau Merah", "Taman Nasional Baluran"],
-        makanan: ["Sego Tempong", "Pecel Pitik"],
-        budaya: ["Tari Gandrung"]
+
+    Banyuwangi: {
+        makanan: ["Rujak Soto", "Pecel Pitik"],
+        wisata: ["Kawah Ijen", "Pantai Pulau Merah"],
+        kesenian: ["Gandrung", "Seblang"]
     },
-    "Madura": {
-        wisata: ["Bukit Jaddih", "Pantai Lombang", "Air Terjun Toroan"],
-        makanan: ["Sate Madura", "Lorjuk"],
-        budaya: ["Karapan Sapi"]
+
+    Madura: {
+        makanan: ["Sate Madura", "Kaldu Kokot"],
+        wisata: ["Pantai Lombang", "Bukit Jaddih"],
+        kesenian: ["Sapi Sonok", "Karapan Sapi"]
     }
 };
 
-document.getElementById("pilihKota").addEventListener("change", function () {
-    const kota = this.value;
-    const infoBox = document.getElementById("infoKota");
+// Fungsi untuk menampilkan konten
+function tampilkanDaerah(namaDaerah) {
+    const daerah = dataDaerah[namaDaerah];
+    const content = document.getElementById("contentArea");
 
-    if (kota === "") {
-        infoBox.innerHTML = "";
+    if (!daerah) {
+        content.innerHTML = "<p>Data tidak ditemukan.</p>";
         return;
     }
 
-    const info = data[kota];
+    content.innerHTML = `
+        <h2>${namaDaerah}</h2>
+        <h3>Makanan Khas</h3>
+        <ul>${daerah.makanan.map(m => `<li>${m}</li>`).join("")}</ul>
 
-    infoBox.innerHTML = `
-        <h2>${kota}</h2>
-        <p><strong>Wisata:</strong> ${info.wisata.join(", ")}</p>
-        <p><strong>Makanan Khas:</strong> ${info.makanan.join(", ")}</p>
-        <p><strong>Budaya:</strong> ${info.budaya.join(", ")}</p>
+        <h3>Tempat Wisata</h3>
+        <ul>${daerah.wisata.map(w => `<li>${w}</li>`).join("")}</ul>
+
+        <h3>Kesenian Daerah</h3>
+        <ul>${daerah.kesenian.map(k => `<li>${k}</li>`).join("")}</ul>
     `;
+}
+
+// Pasang event listener ke tombol
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("btnSurabaya").addEventListener("click", () => tampilkanDaerah("Surabaya"));
+    document.getElementById("btnMalang").addEventListener("click", () => tampilkanDaerah("Malang"));
+    document.getElementById("btnBanyuwangi").addEventListener("click", () => tampilkanDaerah("Banyuwangi"));
+    document.getElementById("btnMadura").addEventListener("click", () => tampilkanDaerah("Madura"));
 });
