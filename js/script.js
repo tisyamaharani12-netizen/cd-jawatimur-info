@@ -1,10 +1,9 @@
 // script.js
-
 function toggleContent(id) {
     var content = document.getElementById(id);
-    if (content.style.display === "block") {
-        content.style.display = "none";
+    if (content.classList.contains('show')) {
+        content.classList.remove('show');
     } else {
-        content.style.display = "block";
+        content.classList.add('show');
     }
 }
