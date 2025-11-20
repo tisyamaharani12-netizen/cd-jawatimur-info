@@ -29,6 +29,11 @@ header {
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
+    transition: box-shadow 0.3s ease; /* Tambahan transisi untuk efek hover */
+}
+
+.city:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Efek bayangan saat hover */
 }
 
 .city-header {
@@ -37,11 +42,28 @@ header {
     padding: 15px;
     cursor: pointer;
     font-size: 18px;
+    transition: background-color 0.3s ease; /* Transisi warna latar saat hover */
+}
+
+.city-header:hover {
+    background-color: #0056b3; /* Warna lebih gelap saat hover */
 }
 
 .city-content {
-    display: none;
+    display: none; /* Konten disembunyikan secara default */
     padding: 15px;
+    background-color: #f9f9f9; /* Latar belakang abu-abu muda untuk konten */
+    border-top: 1px solid #ddd; /* Garis pemisah */
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Transisi smooth untuk muncul/hilang */
+    max-height: 0; /* Tinggi maksimal 0 saat tersembunyi */
+    opacity: 0; /* Opasitas 0 saat tersembunyi */
+    overflow: hidden; /* Sembunyikan overflow */
+}
+
+.city-content.show {
+    display: block; /* Muncul saat diklik */
+    max-height: 1000px; /* Tinggi maksimal besar saat muncul */
+    opacity: 1; /* Opasitas penuh */
 }
 
 ul {
@@ -55,4 +77,3 @@ footer {
     background: #007bff;
     color: white;
 }
-
