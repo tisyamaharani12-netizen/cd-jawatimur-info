@@ -1,5 +1,4 @@
-/* style.css */
-
+/* Styling untuk body halaman */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,6 +7,7 @@ body {
     color: #333;
 }
 
+/* Styling untuk header */
 header {
     background-color: #007bff;
     color: white;
@@ -15,6 +15,7 @@ header {
     padding: 20px;
 }
 
+/* Styling untuk container utama */
 .container {
     max-width: 1200px;
     margin: 20px auto;
@@ -24,53 +25,36 @@ header {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Styling untuk setiap kota */
 .city {
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    transition: box-shadow 0.3s ease; /* Tambahan transisi untuk efek hover */
 }
 
-.city:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Efek bayangan saat hover */
-}
-
+/* Styling untuk header kota (klik-able) */
 .city-header {
     background-color: #007bff;
     color: white;
     padding: 15px;
     cursor: pointer;
     font-size: 18px;
-    transition: background-color 0.3s ease; /* Transisi warna latar saat hover */
 }
 
-.city-header:hover {
-    background-color: #0056b3; /* Warna lebih gelap saat hover */
-}
-
+/* Styling untuk konten detail kota (default hidden) */
 .city-content {
-    display: none; /* Konten disembunyikan secara default */
+    display: none;
     padding: 15px;
-    background-color: #f9f9f9; /* Latar belakang abu-abu muda untuk konten */
-    border-top: 1px solid #ddd; /* Garis pemisah */
-    transition: max-height 0.5s ease, opacity 0.5s ease; /* Transisi smooth untuk muncul/hilang */
-    max-height: 0; /* Tinggi maksimal 0 saat tersembunyi */
-    opacity: 0; /* Opasitas 0 saat tersembunyi */
-    overflow: hidden; /* Sembunyikan overflow */
 }
 
-.city-content.show {
-    display: block; /* Muncul saat diklik */
-    max-height: 1000px; /* Tinggi maksimal besar saat muncul */
-    opacity: 1; /* Opasitas penuh */
-}
-
+/* Styling untuk list */
 ul {
     list-style-type: disc;
     margin-left: 20px;
 }
 
+/* Styling untuk footer */
 footer {
     text-align: center;
     padding: 10px;
