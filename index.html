@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eksplorasi Jawa Timur</title>
-      <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Eksplorasi Jawa Timur</title>
-       <link rel="stylesheet" href="style.css">  <!-- Tambahkan baris ini -->
-   </head>
-
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+        header { background-color: #007bff; color: white; text-align: center; padding: 20px; }
+        .container { max-width: 1200px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .city { margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
+        .city-header { background-color: #007bff; color: white; padding: 15px; cursor: pointer; font-size: 18px; }
+        .city-content { display: none; padding: 15px; }
+        ul { list-style-type: disc; margin-left: 20px; }
+        footer { text-align: center; padding: 10px; background: #007bff; color: white; }
+    </style>
 </head>
 <body>
     <header>
@@ -385,14 +388,25 @@
         <p>&copy; 2023 Eksplorasi Jawa Timur. Dibuat untuk GitHub Pages.</p>
     </footer>
     
-       <body>
-       <!-- Konten HTML lainnya -->
-       
-       <script src="script.js"></script>  <!-- Tambahkan baris ini di akhir body -->
-   </body>
-   
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
+                   
+               
+               
+        
+       
+                
+      
 
     
    
