@@ -3,30 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eksplor Jawa Timur</title>
-    <link rel="stylesheet" href="style/style.css">
+    <title>Eksplorasi Jawa Timur</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+        header { background-color: #007bff; color: white; text-align: center; padding: 20px; }
+        .container { max-width: 1200px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .city { margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
+        .city-header { background-color: #007bff; color: white; padding: 15px; cursor: pointer; font-size: 18px; }
+        .city-content { display: none; padding: 15px; }
+        ul { list-style-type: disc; margin-left: 20px; }
+        footer { text-align: center; padding: 10px; background: #007bff; color: white; }
+    </style>
 </head>
 <body>
-
     <header>
-        <h1>Eksplor Jawa Timur</h1>
-        <p>Website Informasi Wisata, Makanan, dan Budaya</p>
+        <h1>Eksplorasi Jawa Timur</h1>
+        <p>Klik kota untuk lihat wisata, makanan, dan budaya!</p>
     </header>
-
+    
     <div class="container">
-        <h2>Pilih Kota</h2>
-
-        <select id="pilihKota">
-            <option value="">-- Pilih Kota --</option>
-            <option value="Surabaya">Surabaya</option>
-            <option value="Malang">Malang</option>
-            <option value="Banyuwangi">Banyuwangi</option>
-            <option value="Madura">Madura</option>
-        </select>
-
-        <div id="infoKota" class="info-box"></div>
+        <div class="city">
+            <div class="city-header" onclick="toggleContent('surabaya')">Surabaya</div>
+            <div id="surabaya" class="city-content">
+                <h3>Wisata Unggulan</h3>
+                <ul>
+                    <li>Monumen Tugu Pahlawan</li>
+                    <li>Kebun Binatang Surabaya</li>
+                    <li>Masjid Nasional Al Akbar</li>
+                </ul>
+                <h3>Makanan Khas</h3>
+                <ul>
+                    <li>Rawon</li>
+                    <li>Sate Klopo</li>
+                    <li>Lontong Balap</li>
+                </ul>
+                <h3>Budaya / Tradisi</h3>
+                <ul>
+                    <li>Festival Surabaya North Quay</li>
+                    <li>Tradisi Ngaben (kremasi Hindu)</li>
+                    <li>Tari Gambyong</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="city">
+            <div class="city-header" onclick="toggleContent('malang')">Malang</div>
+            <div id="malang" class="city-content">
+                <h3>Wisata Unggulan</h3>
+                <ul>
+                    <li>Gunung Bromo</li>
+                    <li>Pantai Balekambang</li>
+                    <li>Coban Rondo</li>
+                </ul>
+                <h3>Makanan Khas</h3>
+                <ul>
+                    <li>Bakso Malang</li>
+                    <li>Ayam Goreng Mbok Berek</li>
+                    <li>Tempe Mendoan</li>
+                </ul>
+                <h3>Budaya / Tradisi</h3>
+                <ul>
+                    <li>Festival Malang Kembali</li>
+                    <li>Tradisi Karapan Sapi (di Madura)</li>
+                    <li>Tari Remo</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="city">
+            <div class="city-header" onclick="toggleContent('kediri')">Kediri</div>
+            <div id="kediri" class="city-content">
+                <h3>Wisata Unggulan</h3>
+                <ul>
+                    <li>Candi Penataran</li>
+                    <li>Gunung Kelud</li>
+                    <li>Air Terjun Dolo</li>
+                </ul>
+                <h3>Makanan Khas</h3>
+                <ul>
+                    <li>Soto Kediri</li>
+                    <li>Tahu Campur</li>
+                    <li>Gudeg Kediri</li>
+                </ul>
+                <h3>Budaya / Tradisi</h3>
+                <ul>
+                    <li>Festival Kediri Jazz</li>
+                    <li>Tradisi Sekaten</li>
+                    <li>Tari Topeng Kediri</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="city">
+            <div class="city-header" onclick="toggleContent('madiun')">Madiun</div>
+            <div id="madiun" class="city-content">
+                <h3>Wisata Unggulan</h3>
+                <ul>
+                    <li>Candi Wilis</li>
+                    <li>Pantai Parangtritis (dekat)</li>
+                    <li>Museum Kartini</li>
+                </ul>
+                <h3>Makanan Khas</h3>
+                <ul>
+                    <li>Nasi Pecel Madiun</li>
+                    <li>Sate Ayam Madiun</li>
+                    <li>Klepon</li>
+                </ul>
+                <h3>Budaya / Tradisi</h3>
+                <ul>
+                    <li>Festival Madiun</li>
+                    <li>Tradisi Nyadran</li>
+                    <li>Tari Jaranan</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="city">
+            <div class="city-header" onclick="toggleContent('batu')">Batu</div>
+            <div id="batu" class="city-content">
+                <h3>Wisata Unggulan</h3>
+                <ul>
+                    <li>Jatim Park</li>
+                    <li>Museum Angkut</li>
+                    <li>Gunung Panderman</li>
+                </ul>
+                <h3>Makanan Khas</h3>
+                <ul>
+                    <li>Apel Malang</li>
+                    <li>Pisang Goreng</li>
+                    <li>Sate Batu</li>
+                </ul>
+                <h3>Budaya / Tradisi</h3>
+                <ul>
+                    <li>Festival Batu Night Spectacular</li>
+                    <li>Tradisi Ngaben</li>
+                    <li>Tari Kecak</li>
+                </ul>
+            </div>
+        </div>
     </div>
-
-    <script src="script/app.js"></script>
+    
+    <footer>
+        <p>&copy; 2023 Eksplorasi Jawa Timur. Dibuat untuk GitHub Pages.</p>
+    </footer>
+    
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
+
