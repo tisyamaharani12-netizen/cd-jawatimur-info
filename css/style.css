@@ -1,4 +1,29 @@
-/* Styling untuk setiap kota */
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
 .city {
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -6,7 +31,6 @@
     overflow: hidden;
 }
 
-/* Styling untuk header kota (klik-able) */
 .city-header {
     background-color: #007bff;
     color: white;
@@ -15,16 +39,20 @@
     font-size: 18px;
 }
 
-/* Styling untuk konten detail kota (default hidden) */
 .city-content {
     display: none;
     padding: 15px;
 }
 
-/* Styling untuk list */
 ul {
     list-style-type: disc;
     margin-left: 20px;
 }
 
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+}
 
