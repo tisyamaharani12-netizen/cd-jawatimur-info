@@ -1,4 +1,5 @@
-// Fungsi untuk toggle (buka/tutup) konten detail kota
+// script.js
+
 function toggleContent(id) {
     var content = document.getElementById(id);
     if (content.style.display === "block") {
