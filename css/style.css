@@ -9,7 +9,7 @@ body {
 
 /* Styling untuk header */
 header {
-    background-color: #007bff;
+    background-color: #008B8B;
     color: white;
     text-align: center;
     padding: 20px;
@@ -35,7 +35,7 @@ header {
 
 /* Styling untuk header kota (klik-able) */
 .city-header {
-    background-color: #007bff;
+    background-color:#008B8B;
     color: white;
     padding: 15px;
     cursor: pointer;
@@ -58,6 +58,6 @@ ul {
 footer {
     text-align: center;
     padding: 10px;
-    background: #007bff;
+    background: #008B8B;
     color: white;
 }
